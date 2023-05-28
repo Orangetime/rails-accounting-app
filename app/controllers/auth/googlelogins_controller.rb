@@ -1,4 +1,4 @@
-class GoogleloginsController < ApplicationController
+class Auth::GoogleloginsController < ApplicationController
   skip_before_action :logged_in?
 
   def create
@@ -6,10 +6,10 @@ class GoogleloginsController < ApplicationController
       session[:current_user_id] = user.id
 
       flash[:success] = ['You are logged in']
-      redirect_to users_path
+      redirect_to auth_users_path
     else
       flash[:danger] = ['Unathorize user']
-      redirect_to login_path
+      redirect_to auth_users_path
     end
   end
 

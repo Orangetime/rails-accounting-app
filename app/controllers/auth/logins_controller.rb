@@ -1,4 +1,4 @@
-class LoginsController < ApplicationController
+class Auth::LoginsController < ApplicationController
   skip_before_action :logged_in?
 
   def new; end
@@ -12,10 +12,16 @@ class LoginsController < ApplicationController
       redirect_to users_path
     else
       flash[:danger] = ['Unathorize user']
-      redirect_to login_path
+      redirect_to auth_login_path
     end
   end
 
+  def destroy
+    user = User.find_by(id: session[:current_user_id])
+    user.destroy
+    flash[:success] = ['You are logged out']
+    edirect_to auth_login_path
+  end
   private
 
   def permitted_params

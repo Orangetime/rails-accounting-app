@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   def logged_in?
     unless current_user
       flash[:danger] = ['Unathorize user']
-      redirect_to root_path
+      redirect_to auth_root_path
     end
   end
 
