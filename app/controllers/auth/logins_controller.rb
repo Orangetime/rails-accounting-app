@@ -17,11 +17,11 @@ class Auth::LoginsController < ApplicationController
   end
 
   def destroy
-    user = User.find_by(id: session[:current_user_id])
-    user.destroy
+    session[:current_user_id] = nil
     flash[:success] = ['You are logged out']
-    edirect_to auth_login_path
+    redirect_to auth_login_path
   end
+
   private
 
   def permitted_params

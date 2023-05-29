@@ -29,6 +29,8 @@ gem 'bootstrap', '~> 5.3.0.alpha3'
 gem 'slim'
 gem 'simple_form'
 gem 'google_sign_in'
+gem 'jwt'
+gem 'figaro', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
