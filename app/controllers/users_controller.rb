@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :current_user
 
   def index
-    @users = User.where(first_name: nil)
+    @users = User.all
   end
 
   def new
