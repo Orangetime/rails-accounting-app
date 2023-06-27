@@ -135,8 +135,6 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.14.3-aarch64-linux)
-      racc (~> 1.4)
     nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
     oauth2 (2.0.9)
@@ -266,7 +264,6 @@ DEPENDENCIES
   capybara (>= 3.26)
   google_sign_in
   jbuilder (~> 2.7)
-  jwt
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
