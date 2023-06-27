@@ -15,19 +15,6 @@ ActiveRecord::Schema.define(version: 2023_05_29_085635) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "sessions", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.datetime "last_used_at"
-    t.boolean "status"
-    t.string "token"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["last_used_at"], name: "index_sessions_on_last_used_at"
-    t.index ["status"], name: "index_sessions_on_status"
-    t.index ["token"], name: "index_sessions_on_token", unique: true
-    t.index ["user_id"], name: "index_sessions_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password"
@@ -37,5 +24,4 @@ ActiveRecord::Schema.define(version: 2023_05_29_085635) do
     t.string "google_id"
   end
 
-  add_foreign_key "sessions", "users"
 end
