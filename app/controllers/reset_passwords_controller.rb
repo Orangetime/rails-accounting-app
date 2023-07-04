@@ -1,12 +1,12 @@
-class Auth::ResetPasswordsController < ApplicationController
+class ResetPasswordsController < ApplicationController
   def edit
-    @user = User.find_by(params[:id])
+    @user = User.find_by(id: params[:id])
 
     UserPolicy.authorize!(current_user, @user, :reset_password)
   end
 
   def update
-    @user = User.find_by(params[:id])
+    @user = User.find_by(id: params[:id])
 
     UserPolicy.authorize!(current_user, @user, :reset_password)
 

@@ -1,7 +1,7 @@
 class ApplicationPolicy
   class ActionForbiddenErorr < StandardError; end
 
-  def Initialize(current_user, resource)
+  def initialize(current_user, resource)
     @current_user = current_user
     @resource = resource
   end
