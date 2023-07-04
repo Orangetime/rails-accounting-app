@@ -85,6 +85,8 @@ GEM
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     date (3.3.3)
+    enumerize (2.6.1)
+      activesupport (>= 3.2)
     erubi (1.12.0)
     execjs (2.8.1)
     faraday (2.7.4)
@@ -136,6 +138,8 @@ GEM
       net-protocol
     nio4r (2.5.9)
     nokogiri (1.14.3-aarch64-linux)
+      racc (~> 1.4)
+    nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
     oauth2 (2.0.9)
       faraday (>= 0.17.3, < 3.0)
@@ -255,12 +259,14 @@ GEM
 
 PLATFORMS
   aarch64-linux
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   bootstrap (~> 5.3.0.alpha3)
   byebug
   capybara (>= 3.26)
+  enumerize
   google_sign_in
   jbuilder (~> 2.7)
   listen (~> 3.3)

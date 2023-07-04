@@ -1,0 +1,36 @@
+h3= 'All users'
+table
+      thead
+        tr
+          th Id
+          th Email
+          th Password
+          th Role
+          th Created
+          th Updated
+      tbody
+          - @users.each do |u|
+              tr
+                td= u.id
+                td= u.email
+                td= u.password
+                td= u.role
+                td= u.created_at
+                td= u.updated_at
+css:
+  table, th, td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+  }
+
+  table {
+    width: 100%;
+  }
+  th, td {
+    padding: 10px;
+  }
+  h3 {
+    color: green;
+    text-align: center;
+    margin: 20px 0;
+  }

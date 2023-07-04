@@ -1,18 +1,18 @@
 default: &default
-  adapter: postgresql
-  encoding: unicode
-  host: db
-  user: postgres
-  password: postgres
-  
+    adapter: postgresql
+    encoding: unicode
+    host: db
+    user: postgres
+    password: postgres
+
 development:
-  <<: *default
-  database: app_development
+    <<: *default
+    database: app_develop
 
 test:
-  <<: *default
-  database: app_test
+    <<: *default
+    database: app_testing
 
 production:
-  <<: *default
-  database: app_production
+    <<: *default
+    database: app_prod

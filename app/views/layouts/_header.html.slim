@@ -1,5 +1,13 @@
 .card.bg-dark.rounded-0.justify-content-center
   .card-header
-    = link_to root_path, class: 'navbar-brand text-white text-xl-left' do
+    = link_to auth_root_path, class: 'navbar-brand text-white text-xl-left' do
       .d-inline.m-2
       = 'Accounting app'
+      - if @current_user
+        = link_to auth_login_path(session), class: 'navbar-brand text-white text-xl-right' do
+          .d-inline.m-2
+          = 'Log out'
+      - else
+        = link_to new_user_path, class: 'navbar-brand text-white text-xl-right' do
+          .d-inline.m-2
+          = 'Registrired'
