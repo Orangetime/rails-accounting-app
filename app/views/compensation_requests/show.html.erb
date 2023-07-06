@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @compensation_request.amount %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @compensation_request.reason %>
+</p>
+
+<p>
+  <strong>Currency:</strong>
+  <%= @compensation_request.currency %>
+</p>
+
+<%= link_to 'Edit', edit_compensation_request_path(@compensation_request) %> |
+<%= link_to 'Back', compensation_requests_path %>
